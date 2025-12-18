@@ -4,19 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Architectural & Civil Engineering | MGM</title>
+    <title>Contact Us | MGM</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="MGM Logo">
+                    <img src="images/logo.png" alt="MGM">
                     <div class="brand-text">
                         <h2>MGM</h2><span>Design & Build</span>
                     </div>
@@ -24,9 +25,10 @@
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#services">Back to Services</a></li>
-                <li><a href="civil.html" class="lang-btn">عربي <i class="fas fa-globe"></i></a></li>
-                <li><a href="index.html#contact" class="btn-contact">Contact Us</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="contact.html" class="lang-btn">عربي <i class="fas fa-globe"></i></a></li>
+                <li><a href="contact-en.html" class="btn-contact active">Contact Us</a></li>
             </ul>
             <div class="menu-toggle"><i class="fas fa-bars"></i></div>
         </div>
@@ -34,58 +36,87 @@
 
     <!-- Hero -->
     <section class="service-hero"
-        style="background-image: linear-gradient(rgba(0,51,102,0.7), rgba(0,51,102,0.7)), url('https://source.unsplash.com/1600x900/?construction,building');">
+        style="background-image: linear-gradient(rgba(0,51,102,0.8), rgba(0,51,102,0.8)), url('https://source.unsplash.com/1600x900/?contact,phone');">
         <div class="container">
-            <h1 class="animate-on-scroll">Architectural & Civil Engineering</h1>
-            <p class="animate-on-scroll delay-1">Turning architectural visions into reality, from foundations to
-                high-end finishing.</p>
+            <h1 class="animate-on-scroll">Contact Us</h1>
+            <p class="animate-on-scroll delay-1">We are here to answer your questions and discuss your future projects.
+            </p>
         </div>
     </section>
 
-    <!-- Details -->
+    <!-- Contact Content -->
     <section class="section-padding">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-text animate-on-scroll">
-                    <h2>Excellence in Design & Construction</h2>
-                    <p>At MGM, we believe civil engineering is the backbone of any successful project. We offer
-                        integrated execution services covering all construction phases, starting from excavation and
-                        deep foundations, through concrete structures, to the finest interior and exterior finishing.
-                    </p>
-                    <p>Our engineering team excels in executing complex architectural designs with extreme precision,
-                        strictly adhering to timelines and standard codes (Egyptian & Saudi Codes). We also provide
-                        innovative solutions for restoring old buildings and structural rehabilitation.</p>
-                </div>
-                <div class="about-cert animate-on-scroll delay-1">
-                    <h3>Our Services in this Sector:</h3>
-                    <ul class="cert-list">
-                        <li><i class="fas fa-check-circle"></i> Concrete structures and steel constructions.</li>
-                        <li><i class="fas fa-check-circle"></i> Integrated architectural finishing (Interior &
-                            Exterior).</li>
-                        <li><i class="fas fa-check-circle"></i> Insulation works (Water, Thermal, Acoustic).</li>
-                        <li><i class="fas fa-check-circle"></i> Landscape and internal road works.</li>
-                        <li><i class="fas fa-check-circle"></i> Restoration and structural strengthening.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+            <div class="contact-page-grid">
 
-    <!-- Gallery -->
-    <section class="section-padding bg-light">
-        <div class="container">
-            <div class="section-header">
-                <h2>Civil Works Gallery</h2>
-                <div class="line"></div>
-            </div>
-            <div class="service-gallery">
-                <div class="gallery-item animate-on-scroll"><img
-                        src="images/Arch/Is-Architecture-Better-Then-Civil-Engineering.jpg" alt="Concrete"></div>
-                <div class="gallery-item animate-on-scroll delay-1"><img
-                        src="images/Arch/Master's programme in Civil and Architectural Engineering.jpg" alt="Facade">
+                <!-- Form -->
+                <div class="contact-form-box animate-on-scroll">
+                    <h3>Send us a Message</h3>
+                    <p>Fill out the form below and our team will get back to you shortly.</p>
+
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" placeholder="Your Phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" placeholder="Message Subject">
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="5" placeholder="Write your message here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary w-100">Send Message</button>
+                    </form>
                 </div>
-                <div class="gallery-item animate-on-scroll delay-2"><img src="images/Arch/structural-designs.jpg"
-                        alt="Finishing"></div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-side animate-on-scroll delay-1">
+                    <h3>Contact Information</h3>
+
+                    <div class="info-card-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Egypt Branch</h4>
+                            <p>Damanhour, Elbuhaira, Egypt</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>KSA Branch</h4>
+                            <p>Buraidah, Qassim, Saudi Arabia</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Phone Numbers</h4>
+                            <p>+20 111 26 90 600</p>
+                            <p>+966 50 19 388 54</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Address</h4>
+                            <p>info@mgm-mep.com</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -134,9 +165,6 @@
                         <li><a href="#projects-list">Our Projects</a></li>
                         <li><a href="#contact">Contact Us</a></li>
                     </ul>
-                    <div class="menu-toggle">
-                        <i class="fas fa-bars"></i>
-                    </div>
                 </div>
 
                 <div class="footer-col">
