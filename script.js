@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. كود قائمة الموبايل (القديم)
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
 
@@ -10,14 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. كود الأنيميشن (الجديد)
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             console.log(entry)
             if (entry.isIntersecting) {
-                entry.target.classList.add('show'); // يضيف كلاس الظهور
+                entry.target.classList.add('show'); 
             } else {
-                // اختياري: لو عايزه يختفي تاني لما تطلع فوق، شيل علامة التعليق من السطر الجاي
                 entry.target.classList.remove('show'); 
             }
         });

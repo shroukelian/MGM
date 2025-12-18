@@ -2,8 +2,8 @@
    CUSTOM FONT DECLARATION
    ========================================= */
 @font-face {
-    font-family: 'GE SS Two'; /* ده الاسم اللي هنستخدمه في الكود */
-    src: url('fonts/GE-SS-Two-Bold.otf'); /* تأكدي إن الاسم والامتداد مطابقين للملف اللي نزلتيه */
+    font-family: 'GE SS Two'; 
+    src: url('fonts/GE-SS-Two-Bold.otf'); 
     font-weight: bold;
     font-style: normal;
 }
@@ -27,21 +27,20 @@ html{
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* الخط الافتراضي للإنجليزي */
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     overflow-x: hidden;
 }
-/* --- 1. تحديث تنسيق اللوجو (صورة + نص) --- */
 .logo a {
     display: flex;
     align-items: center;
-    gap: 12px; /* مسافة بين الصورة والاسم */
+    gap: 12px; 
     text-decoration: none;
 }
 
 .logo img {
-    height: 55px; /* ارتفاع الصورة */
+    height: 55px; 
     width: auto;
 }
 
@@ -61,12 +60,11 @@ body {
 
 .brand-text span {
     font-size: 0.85rem;
-    color: var(--secondary-color); /* اللون الأصفر */
+    color: var(--secondary-color); 
     font-weight: 600;
-    letter-spacing: 1px; /* تباعد بين الحروف */
+    letter-spacing: 1px; 
 }
 
-/* --- 2. تحديث تنسيق صور العملاء (Clients Logos) --- */
 .clients-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -77,7 +75,7 @@ body {
 .client-item {
     background: #fff;
     border: 1px solid #eee;
-    height: 100px; /* ارتفاع ثابت للبوكس */
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,26 +87,24 @@ body {
 .client-item img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain; /* عشان الصورة تظهر كاملة جوا البوكس */
+    object-fit: contain; 
     /* filter: grayscale(100%);  */
     opacity: 0.7;
     transition: all 0.3s ease;
 }
 
-/* عند مرور الماوس */
 .client-item:hover {
     border-color: var(--secondary-color);
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .client-item:hover img {
-    filter: grayscale(0%); /* ترجع لألوانها الطبيعية */
+    filter: grayscale(0%); 
     opacity: 1;
-    transform: scale(1.1); /* تكبير بسيط */
+    transform: scale(1.1); 
 }
-/* خصائص اللغة العربية */
 html[dir="rtl"] body {
-    font-family: 'Cairo', sans-serif; /* الخط للعربي */
+    font-family: 'Cairo', sans-serif; 
     text-align: right;
 }
 
@@ -150,7 +146,7 @@ ul { list-style: none; }
     width: 100%;
     top: 0;
     z-index: 1000;
-    height: 80px; /* زيادة الارتفاع قليلاً لاستيعاب اللوجو */
+    height: 80px; 
     display: flex;
     align-items: center;
 }
@@ -167,7 +163,7 @@ ul { list-style: none; }
     align-items: center;
 }
 .logo img {
-    height: 60px; /* التحكم في ارتفاع اللوجو */
+    height: 60px; 
     width: auto;
     object-fit: contain;
 }
@@ -258,7 +254,6 @@ ul { list-style: none; }
     border-radius: 8px;
     border-left: 4px solid var(--secondary-color);
 }
-/* عكس البوردر في العربي */
 html[dir="rtl"] .vm-box {
     border-left: none;
     border-right: 4px solid var(--secondary-color);
@@ -345,7 +340,6 @@ html[dir="rtl"] .vm-box {
 .contact-box p { margin: 10px 0; }
 .contact-box i { color: var(--secondary-color); margin-right: 10px; }
 
-/* تعديل أيقونات التواصل في العربي */
 html[dir="rtl"] .contact-box i {
     margin-right: 0;
     margin-left: 10px;
@@ -386,20 +380,17 @@ footer {
    SCROLL ANIMATION STYLES
    ========================================= */
 
-/* الحالة الابتدائية: العنصر مخفي ومنزاح للأسفل */
 .animate-on-scroll {
     opacity: 0;
-    transform: translateY(50px); /* ينزل لتحت 50 بكسل */
-    transition: all 0.8s ease-out; /* نعومة الحركة */
+    transform: translateY(50px); 
+    transition: all 0.8s ease-out; 
 }
 
-/* الحالة النهائية: العنصر ظاهر وفي مكانه الطبيعي */
 .animate-on-scroll.show {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* تأخير للحركة (عشان الكروت تظهر ورا بعض مش مرة واحدة) */
 .delay-1 { transition-delay: 0.1s; }
 .delay-2 { transition-delay: 0.2s; }
 .delay-3 { transition-delay: 0.3s; }
@@ -412,17 +403,16 @@ footer {
 .floating-actions {
     position: fixed;
     bottom: 30px;
-    left: 30px; /* مكانها الافتراضي لليسار (للإنجليزي) */
-    z-index: 9999; /* لتظهر فوق كل العناصر */
+    left: 30px;
+    z-index: 9999;
     display: flex;
-    flex-direction: column-reverse; /* الواتس تحت والهاتف فوقه */
-    gap: 15px; /* مسافة بين الزرين */
+    flex-direction: column-reverse;
+    gap: 15px; 
 }
 
-/* تعديل المكان للغة العربية تلقائياً */
 html[dir="rtl"] .floating-actions {
     left: auto;
-    right: 30px; /* تنتقل لليمين في العربي */
+    right: 30px;
 }
 
 .float-btn {
@@ -439,35 +429,30 @@ html[dir="rtl"] .floating-actions {
     text-decoration: none;
 }
 
-/* تنسيق زر الواتساب */
 .float-btn.whatsapp {
     background-color: #25d366;
     animation: pulse-green 2s infinite;
 }
 
-/* تنسيق زر الهاتف */
 .float-btn.phone {
-    background-color: var(--secondary-color); /* اللون الأصفر المميز للشركة */
-    color: var(--primary-color); /* الأيقونة باللون الأزرق */
-    width: 50px; /* أصغر قليلاً من الواتساب */
+    background-color: var(--secondary-color); 
+    color: var(--primary-color);
+    width: 50px; 
     height: 50px;
     font-size: 22px;
 }
 
-/* تأثير عند المرور بالماوس */
 .float-btn:hover {
     transform: scale(1.1) translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* أنيميشن نبض لزر الواتساب لجذب الانتباه */
 @keyframes pulse-green {
     0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
     70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
     100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
-/* في الموبايل نصغر الأزرار قليلاً ونبعدها عن الحافة */
 @media (max-width: 768px) {
     .floating-actions {
         bottom: 20px;
@@ -492,15 +477,14 @@ html[dir="rtl"] .floating-actions {
    CTA BUTTONS PULSE ANIMATION
    ========================================= */
 
-/* تعريف حركة النبض */
 @keyframes cta-pulse {
     0% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); /* لون الظل أصفر */
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); 
     }
     70% {
-        transform: scale(1.05); /* تكبير بسيط */
-        box-shadow: 0 0 0 10px rgba(255, 193, 7, 0); /* تلاشي الظل */
+        transform: scale(1.05); 
+        box-shadow: 0 0 0 10px rgba(255, 193, 7, 0);
     }
     100% {
         transform: scale(1);
@@ -508,20 +492,17 @@ html[dir="rtl"] .floating-actions {
     }
 }
 
-/* 1. تطبيق الحركة على زر القائمة العلوية (تواصل معنا) */
 .btn-contact {
-    animation: cta-pulse 2s infinite; /* تتكرر كل ثانيتين */
+    animation: cta-pulse 2s infinite; 
 }
 
-/* 2. تطبيق الحركة على زر الهيرو (اطلب عرض سعر) */
 .btn.primary {
     animation: cta-pulse 2s infinite;
 }
 
-/* إيقاف الحركة عند وقوف الماوس عليها (لإعطاء شعور بالثبات عند الضغط) */
 .btn-contact:hover, .btn.primary:hover {
     animation: none;
-    transform: scale(1.1); /* تكبير ثابت عند الهوفر */
+    transform: scale(1.1);
 }
 /* =========================================
    PROJECTS SECTION STYLES
@@ -537,7 +518,7 @@ html[dir="rtl"] .floating-actions {
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     overflow: hidden;
-    border-top: 4px solid var(--secondary-color); /* الخط الأصفر */
+    border-top: 4px solid var(--secondary-color); 
     transition: transform 0.3s ease;
 }
 
@@ -556,7 +537,7 @@ html[dir="rtl"] .floating-actions {
 }
 
 .project-header img {
-    height: 40px; /* حجم لوجو العميل */
+    height: 40px; 
     width: auto;
 }
 
@@ -603,18 +584,18 @@ html[dir="rtl"] .floating-actions {
 }
 
 /* =========================================
-   CERTIFICATES SECTION STYLES (IMAGES)
+   CERTIFICATES SECTION STYLES 
    ========================================= */
 .cert-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* تصغير العرض ليتناسب مع صور المستندات */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     gap: 30px;
     justify-content: center;
 }
 
 .cert-card {
     background: #fff;
-    padding: 15px; /* تقليل الحواف لترك مساحة للصورة */
+    padding: 15px; 
     text-align: center;
     border-radius: 8px;
     border: 1px solid #eee;
@@ -622,16 +603,15 @@ html[dir="rtl"] .floating-actions {
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-/* تنسيق الصورة داخل الكارت */
 .cert-card img {
     width: 100%;
-    height: 280px; /* ارتفاع موحد للشهادات لتظهر بشكل مرتب */
-    object-fit: cover; /* لملء الإطار (أو استخدم contain لو عايز الصورة كاملة بدون قص) */
-    object-position: top; /* التركيز على الجزء العلوي من الشهادة */
+    height: 280px;
+    object-fit: cover; 
+    object-position: top; 
     border-radius: 5px;
     margin-bottom: 15px;
     border: 1px solid #f0f0f0;
-    transition: all 0.5s ease; /* نعومة الحركة */
+    transition: all 0.5s ease;
 }
 
 .cert-card h3 {
@@ -640,31 +620,29 @@ html[dir="rtl"] .floating-actions {
     margin: 0;
 }
 
-/* تأثير الهوفر: تكبير الصورة */
 .cert-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0,0,0,0.15);
     border-color: var(--secondary-color);
 }
 
-/* حركة إضافية للصورة عند الهوفر */
 .cert-card:hover img {
-    transform: scale(1.03); /* تكبير بسيط للصورة */
+    transform: scale(1.03); 
 }
 /* =========================================
-   FOOTER STYLES (NEW DESIGN)
+   FOOTER STYLES 
    ========================================= */
 .main-footer {
-    background-color: #1a1a1a; /* لون خلفية داكن جداً مثل الصورة */
+    background-color: #1a1a1a; 
     color: #fff;
     padding-top: 70px;
     margin-top: 50px;
-    border-top: 5px solid var(--secondary-color); /* الخط الأصفر العلوي */
+    border-top: 5px solid var(--secondary-color); 
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 أعمدة */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 30px;
     padding-bottom: 50px;
 }
@@ -675,16 +653,14 @@ html[dir="rtl"] .floating-actions {
     color: #fff;
 }
 
-/* الخط الأصفر تحت العناوين */
 .footer-line {
     width: 50px;
     height: 3px;
     background-color: var(--secondary-color);
-  margin: 0 auto 25px auto; /* 0 من فوق، auto يمين ويسار (للتوسط)، 25px من تحت */
+  margin: 0 auto 25px auto; 
     
-    display: block; /* لضمان أن المارجن يعمل بشكل صحيح */}
+    display: block; }
 
-/* تنسيق صفوف المعلومات (أيقونة + نص) */
 .contact-row {
     display: flex;
     align-items: flex-start;
@@ -693,7 +669,7 @@ html[dir="rtl"] .floating-actions {
 }
 
 .contact-row i {
-    color: var(--secondary-color); /* لون الأيقونة أصفر */
+    color: var(--secondary-color); 
     font-size: 1.2rem;
     margin-top: 5px;
 }
@@ -710,10 +686,9 @@ html[dir="rtl"] .floating-actions {
     color: var(--secondary-color);
 }
 
-/* روابط سريعة */
 .footer-links li {
     margin-bottom: 12px;
-    border-bottom: 1px solid rgba(255,255,255,0.1); /* خط خفيف تحت كل رابط */
+    border-bottom: 1px solid rgba(255,255,255,0.1); 
     padding-bottom: 8px;
 }
 
@@ -729,10 +704,9 @@ html[dir="rtl"] .floating-actions {
 
 .footer-links a:hover {
     color: var(--secondary-color);
-    padding-right: 10px; /* حركة بسيطة عند الهوفر */
+    padding-right: 10px;
 }
 
-/* أيقونات السوشيال ميديا */
 .social-icons {
     display: flex;
     gap: 10px;
@@ -758,9 +732,8 @@ html[dir="rtl"] .floating-actions {
     transform: translateY(-5px);
 }
 
-/* حقوق الملكية في الأسفل */
 .copyrights {
-    background-color: #111; /* لون أغمق للشريط السفلي */
+    background-color: #111; 
     text-align: center;
     padding: 20px;
     font-size: 0.9rem;
@@ -768,20 +741,19 @@ html[dir="rtl"] .floating-actions {
     border-top: 1px solid #333;
 }
 
-/* تجاوب الفوتر مع الموبايل */
 @media (max-width: 992px) {
     .footer-grid {
-        grid-template-columns: repeat(2, 1fr); /* عمودين في التابلت */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 600px) {
     .footer-grid {
-        grid-template-columns: 1fr; /* عمود واحد في الموبايل */
+        grid-template-columns: 1fr;
         text-align: center;
     }
     
-    .footer-line { margin: 0 auto 25px auto; } /* توسيط الخط الأصفر */
+    .footer-line { margin: 0 auto 25px auto; } 
     
     .contact-row {
         flex-direction: column;
@@ -796,12 +768,12 @@ html[dir="rtl"] .floating-actions {
 /* Academy Page Styles */
 .academy-hero {
     background-color: #f4f4f4;
-    padding: 120px 0 60px; /* مسافة من فوق عشان النافبار */
+    padding: 120px 0 60px; 
     text-align: center;
 }
 
 .academy-logo {
-    max-width: 250px; /* حجم اللوجو الذهبي */
+    max-width: 250px; 
     margin-bottom: 20px;
     display: block;
     margin-left: auto;
@@ -836,14 +808,13 @@ html[dir="rtl"] .floating-actions {
     border-radius: 10px;
     margin-top: 30px;
 }
-/* اجعل كارت الخدمة رابط كامل قابل للضغط */
 a.service-card {
     text-decoration: none;
     color: inherit;
     display: block;
 }
 
-/* تنسيق هيدر المشروع (المقاول الرئيسي) */
+
 .project-header {
     display: flex;
     align-items: center;
@@ -860,7 +831,7 @@ a.service-card {
 }
 .main-contractor {
     font-size: 0.8rem;
-    color: #777; /* لون رمادي فاتح */
+    color: #777;
     font-weight: normal;
 }
 
@@ -868,7 +839,6 @@ a.service-card {
    SERVICES DETAILS PAGE STYLES
    ========================================= */
 
-/* هيدر الصفحة الفرعية */
 .page-header {
     height: 400px;
     background-size: cover;
@@ -902,17 +872,16 @@ a.service-card {
 
 .detail-row {
     display: grid;
-    grid-template-columns: 1.2fr 1fr; /* النص يأخذ مساحة أكبر قليلاً من الصورة */
+    grid-template-columns: 1.2fr 1fr; 
     gap: 50px;
     align-items: center;
 }
 
-/* عكس الترتيب (للصفوف الزوجية) */
 .detail-row.reverse {
-    direction: ltr; /* حيلة لقلب الترتيب في الجريد */
+    direction: ltr; 
 }
 .detail-row.reverse > * {
-    direction: rtl; /* إعادة اتجاه النص للعربي */
+    direction: rtl; 
     text-align: right;
 }
 
@@ -940,7 +909,7 @@ a.service-card {
     color: #555;
     margin-bottom: 15px;
     line-height: 1.8;
-    text-align: justify; /* محاذاة النص */
+    text-align: justify; 
 }
 
 .detail-text h3 {
@@ -953,7 +922,6 @@ a.service-card {
     padding-bottom: 5px;
 }
 
-/* القوائم */
 .detail-list {
     list-style: none;
     padding: 0;
@@ -970,7 +938,7 @@ a.service-card {
 
 .detail-list li i {
     color: var(--primary-color);
-    margin-top: 5px; /* محاذاة الأيقونة مع السطر الأول */
+    margin-top: 5px;
 }
 
 /* الصور */
@@ -991,13 +959,13 @@ a.service-card {
 @media (max-width: 900px) {
     .detail-row, .detail-row.reverse {
         grid-template-columns: 1fr;
-        direction: rtl !important; /* إلغاء القلب في الموبايل */
+        direction: rtl !important; 
         text-align: right;
         gap: 30px;
     }
     
     .detail-image {
-        order: -1; /* رفع الصورة فوق الكلام في الموبايل */
+        order: -1; 
     }
     
     .detail-image img {
@@ -1042,39 +1010,37 @@ a.service-card {
 }
 
 .gallery-item:hover img {
-    transform: scale(1.1); /* تأثير الزووم عند الوقوف على الصورة */
+    transform: scale(1.1);
 }
 /* =========================================
    ACADEMY PAGE SPECIFIC STYLES
    ========================================= */
 
 .academy-hero-logo {
-    width: 180px; /* حجم اللوجو */
+    width: 180px; 
     height: auto;
     display: block;
-    margin: 0 auto 20px auto; /* توسيط ومسافة من الأسفل */
+    margin: 0 auto 20px auto; 
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.9); /* خلفية بيضاء شفافة عشان اللوجو يظهر بوضوح */
-    padding: 15px; /* مسافة داخلية */
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 15px; 
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* تعديل ارتفاع الهيدر في هذه الصفحة ليناسب اللوجو */
 .service-hero.academy-hero-bg {
     height: auto;
-    min-height: 70vh; /* ارتفاع أكبر قليلاً */
+    min-height: 70vh; 
     padding-top: 120px;
     padding-bottom: 60px;
-    flex-direction: column; /* ترتيب العناصر تحت بعض */
+    flex-direction: column; 
 }
 
 /* =========================================
-   MOBILE RESPONSIVENESS FIXES (إصلاحات الموبايل)
+   MOBILE RESPONSIVENESS FIXES 
    ========================================= */
 
 @media (max-width: 768px) {
 
-    /* 1. إصلاح الهيدر واللوجو */
     .navbar {
         padding: 0 10px;
         height: 70px;
@@ -1084,17 +1050,17 @@ a.service-card {
     }
 
 
-    /* 2. إصلاح الجزء الأزرق (Hero Section) */
+    /* 2. (Hero Section) */
     .service-hero, .page-header {
-        height: auto; /* إلغاء الارتفاع الثابت */
-        min-height: 250px; /* ارتفاع مناسب للموبايل */
-        padding-top: 100px; /* مسافة من فوق عشان النافبار */
+        height: auto;
+        min-height: 250px; 
+        padding-top: 100px;
         padding-bottom: 40px;
-        background-attachment: scroll; /* إلغاء التثبيت لتحسين الأداء */
+        background-attachment: scroll; 
     }
 
     .service-hero h1, .page-header h1 {
-        font-size: 1.8rem !important; /* تصغير عنوان الصفحة */
+        font-size: 1.8rem !important; 
         line-height: 1.3;
         padding: 0 10px;
     }
@@ -1104,50 +1070,46 @@ a.service-card {
         padding: 0 15px;
     }
 
-    /* 3. إصلاح المحتوى والصور (Grid System) */
+    /* 3. (Grid System) */
     .about-grid, .detail-row, .detail-row.reverse {
-        grid-template-columns: 1fr !important; /* عمود واحد فقط */
+        grid-template-columns: 1fr !important; 
         gap: 30px;
-        text-align: center; /* توسيط الكلام */
-        direction: rtl !important; /* ضمان الاتجاه لليمين */
+        text-align: center; 
+        direction: rtl !important; 
     }
 
     .section-padding {
-        padding: 40px 0; /* تقليل المسافات الكبيرة */
+        padding: 40px 0; 
     }
 
-    /* 4. تنسيق الصور */
     .detail-image, .about-cert {
-        order: -1; /* رفع الصورة فوق الكلام في الموبايل */
+        order: -1; 
         margin-bottom: 20px;
     }
 
     .detail-image img {
-        height: 250px; /* ارتفاع مناسب للصورة */
+        height: 250px; 
     }
 
-    /* 5. تنسيق القوائم والنصوص */
     .about-text h2 {
         font-size: 1.5rem;
     }
     
     .detail-text p, .about-text p {
-        text-align: justify; /* ضبط محاذاة النص */
+        text-align: justify;
         font-size: 1rem;
     }
 
     .cert-list li, .detail-list li {
-        text-align: right; /* القوائم تظل يمين */
+        text-align: right; 
         font-size: 0.95rem;
     }
 
-    /* 6. إصلاح معرض الصور */
     .service-gallery {
-        grid-template-columns: 1fr; /* صور تحت بعضها */
+        grid-template-columns: 1fr; 
         padding: 0 10px;
     }
     
-    /* 7. لوجو الأكاديمية */
     .academy-hero-logo {
         width: 120px;
         margin-bottom: 15px;
@@ -1160,11 +1122,10 @@ a.service-card {
 
 .contact-page-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr; /* الفورم أعرض من المعلومات */
+    grid-template-columns: 1.5fr 1fr; 
     gap: 50px;
 }
 
-/* تنسيق الفورم */
 .contact-form-box {
     background: #fff;
     padding: 40px;
@@ -1215,11 +1176,10 @@ a.service-card {
 }
 
 .w-100 {
-    width: 100%; /* زر بعرض كامل */
+    width: 100%; 
     cursor: pointer;
 }
 
-/* تنسيق معلومات الاتصال الجانبية */
 .contact-info-side h3 {
     font-size: 1.5rem;
     color: var(--primary-color);
@@ -1275,50 +1235,45 @@ a.service-card {
         gap: 40px;
     }
 }
-/* رابط الخط (تأكد من وجوده في الهيدر) */
-/* @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@800&display=swap'); */
 
 .mgm-font {
     font-family: 'Almarai', sans-serif !important;
     font-weight: 800 !important; /* سميك جداً */
     font-size: 2.4rem;
-    color: #264e86; /* الأزرق الغامق */
+    color: #264e86; 
     display: flex;
     align-items: center;
     line-height: 1;
     gap: 5px; 
 }
 
-/* تلوين (چي) بالأصفر وتضبيط مكان النقاط */
 .mgm-font .highlight {
-    color: #fdb913; /* الأصفر الذهبي */
+    color: #fdb913;
     position: relative;
-    top: 3px; /* نزول بسيط للأسفل لضبط المحاذاة */
-    font-family: sans-serif; /* أحياناً تغيير الخط لهذا الحرف فقط يظهر النقاط بشكل أوضح */
+    top: 3px;
+    font-family: sans-serif; 
 }
 /* =========================================
    LOGO FONT STYLE (GE SS Two)
    ========================================= */
 
 .mgm-font {
-    font-family: 'GE SS Two', sans-serif !important; /* استخدام الخط الجديد */
-    font-weight: normal !important; /* الخط أصلاً سميك فمش محتاجين bold زيادة */
-    font-size: 2.5rem; /* حجم مناسب */
-    color: #264e86; /* الأزرق */
+    font-family: 'GE SS Two', sans-serif !important; 
+    font-weight: normal !important; 
+    font-size: 2.5rem; 
+    color: #264e86; 
     display: flex;
     align-items: center;
     gap: 8px;
-    line-height: 1; /* ضبط الارتفاع عشان الحروف متطلعش فوق وتحت */
+    line-height: 1;
 }
 
-/* تلوين كلمة "چي" بالأصفر */
 .mgm-font .highlight {
-    color: #fdb913; /* الأصفر */
+    color: #fdb913; 
     position: relative;
-    top: 0; /* الخط ده موزون مش هيحتاج تعديل مكان */
+    top: 0; 
 }
 
-/* في الموبايل */
 @media (max-width: 768px) {
     .mgm-font {
         font-size: 1.8rem;
@@ -1331,12 +1286,12 @@ a.service-card {
     gap: 10px;
 }
 .logo-icon {
-    height: 55px; /* ارتفاع الرمز */
+    height: 55px; 
     width: auto;
 }
 .logo-text-img {
-    height: 30px; /* ارتفاع الكلمة - اضبطه حسب شكل القص */
+    height: 30px; 
     width: auto;
-    margin-top: 5px; /* لضبط المحاذاة */
+    margin-top: 5px; 
 }
 
